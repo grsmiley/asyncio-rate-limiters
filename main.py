@@ -3,7 +3,7 @@ from datetime import timedelta
 
 class RateLimitedQueue(asyncio.Queue):
     ''' A rate limited queue. Set the interval as seconds (int or float) or a timedelta
-        to control how frequently queue items are retured.
+        to control how frequently queue items are returned.
     '''
     def __init__(self, interval:int|float|timedelta, maxsize=0, *, loop=asyncio.mixins._marker):
         super().__init__(maxsize=maxsize, loop=loop)
